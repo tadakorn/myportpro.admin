@@ -13,11 +13,17 @@
       </a>
       <hr>
       <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-          <a href="#" class="nav-link text-white">
-            <font-awesome-icon width="16" height="16" class="me-2" icon="fa-solid fa-house" />
-            Home
-          </a>
+         <li>
+          <router-link
+            to="/"
+            custom
+            v-slot="{ href, navigate}"
+          >
+            <a :href="href" class="nav-link text-white" @click="navigate">
+              <font-awesome-icon width="16" height="16" class="me-2" icon="fa-solid fa-house" />
+              Home
+            </a>
+          </router-link>
         </li>
         <li>
           <router-link
